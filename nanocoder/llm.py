@@ -69,13 +69,19 @@ class LLM:
             "model": self.model,
             "messages": messages,
             "stream": True,
-            "stream_options": {"include_usage": True},
             **self.extra,
         }
         if tools:
             params["tools"] = tools
 
-        stream = self.client.chat.completions.create(**params)
+        # stream_options is an OpenAI extension; not all providers support it,
+        # so try with it first and fall back without on error
+        try:
+            params["stream_options"] = {"include_usage": True}
+            stream = self.client.chat.completions.create(**params)
+        except Exception:
+            params.pop("stream_options", None)
+            stream = self.client.chat.completions.create(**params)
 
         content_parts: list[str] = []
         tc_map: dict[int, dict] = {}  # index -> {id, name, arguments_str}

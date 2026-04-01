@@ -209,7 +209,7 @@ NanoCoder 遵循 **nanoGPT 哲学**：最小化复杂度，最大化理解度。
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) — Anthropic 官方编程 Agent（闭源）
 - [Claw-Code](https://github.com/instructkr/claw-code) — 完整的 Python/Rust 洁净室重实现
-- [nanoGPT](https://github.com/karpata/nanoGPT) — 本项目哲学的灵感来源
+- [nanoGPT](https://github.com/karpathy/nanoGPT) — 本项目哲学的灵感来源
 - [Aider](https://github.com/paul-gauthier/aider) — 成熟的 Python AI 结对编程工具
 
 ## License

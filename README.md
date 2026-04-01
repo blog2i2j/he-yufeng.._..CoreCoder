@@ -205,7 +205,7 @@ If Claude Code is a car, NanoCoder is the engine on a test bench. You can see ev
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) — Anthropic's official coding agent (proprietary)
 - [Claw-Code](https://github.com/instructkr/claw-code) — Full-featured clean-room reimplementation in Python/Rust
-- [nanoGPT](https://github.com/karpata/nanoGPT) — The inspiration for this project's philosophy
+- [nanoGPT](https://github.com/karpathy/nanoGPT) — The inspiration for this project's philosophy
 - [Aider](https://github.com/paul-gauthier/aider) — Established Python AI pair programming tool
 
 ## License
