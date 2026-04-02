@@ -2,7 +2,7 @@
 
 [English](README.md) | [中文](README_CN.md) | [Claude Code 源码深度导读（7 篇）](article/)
 
-[![PyPI](https://img.shields.io/pypi/v/nanocoder)](https://pypi.org/project/nanocoder/)
+[![PyPI](https://img.shields.io/pypi/v/nano-coder)](https://pypi.org/project/nano-coder/)
 [![Python](https://img.shields.io/badge/python-3.10+-blue)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Tests](https://github.com/he-yufeng/NanoCoder/actions/workflows/ci.yml/badge.svg)](https://github.com/he-yufeng/NanoCoder/actions)
@@ -51,7 +51,7 @@ Claude Code 51 万行源码提炼出来的 7 个核心模式：
 ## 安装
 
 ```bash
-pip install nanocoder
+pip install nano-coder
 ```
 
 选你的模型，任何 OpenAI 兼容 API 都行：
