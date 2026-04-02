@@ -32,7 +32,9 @@ You > 读一下 main.py，修掉拼错的 import
 
 它会自己读代码、做精准编辑（每次改动输出 unified diff 让你看清改了什么）、跑命令验证、搜索代码库。跟 Claude Code 一样的工作流，但模型你自己选。
 
-项目叫 **NanoCoder**，MIT 协议开源，搜 GitHub 就能找到。
+项目叫 **NanoCoder**，MIT 协议，GitHub 上完全开源：
+
+**GitHub：https://github.com/he-yufeng/NanoCoder**
 
 ---
 
@@ -181,7 +183,7 @@ response = agent.chat("找出项目里所有 TODO 注释")
 6. 当一个 Claude 不够用：多 Agent 协作系统的三种模式
 7. Feature Flag 背后的秘密：44 个未发布功能（KAIROS、Buddy 宠物系统、Voice Mode……）
 
-导读也在 GitHub 仓库的 article/ 目录下。
+导读也在 GitHub 上：https://github.com/he-yufeng/NanoCoder/tree/main/article
 
 ---
 
@@ -189,6 +191,8 @@ response = agent.chat("找出项目里所有 TODO 注释")
 
 51 万行源码的核心设计，1300 行 Python 复刻。7 个工具，33 个测试全过。
 
-代码全在 GitHub 上，MIT 协议，fork 了随便改。搜 NanoCoder 或者 he-yufeng 就能找到。
+代码全在 GitHub 上，MIT 协议，fork 了随便改：
+
+**GitHub：https://github.com/he-yufeng/NanoCoder**
 
 觉得有用的话给个 Star，有问题评论区聊。
