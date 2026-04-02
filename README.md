@@ -9,7 +9,7 @@
 
 **512,000 lines of TypeScript → 1,300 lines of Python.**
 
-I spent a weekend reverse-engineering the leaked Claude Code source — all half a million lines. Then I stripped it down to the load-bearing walls and rebuilt them in Python. The result: **every key architectural pattern from Claude Code, in a codebase you can read in one sitting.**
+I spent two days reverse-engineering the leaked Claude Code source — all half a million lines. Then I stripped it down to the load-bearing walls and rebuilt them in Python. The result: **every key architectural pattern from Claude Code, in a codebase you can read in one sitting.**
 
 NanoCoder is not another AI coding tool. It's a **blueprint** — the [nanoGPT](https://github.com/karpathy/nanoGPT) of coding agents. Read it, fork it, build your own.
 
