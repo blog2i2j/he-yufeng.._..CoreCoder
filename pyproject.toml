@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "nano-coder"
+name = "nanocoderagent"
 version = "0.1.0"
 description = "Minimal AI coding agent (~1300 LoC) inspired by Claude Code. Works with any LLM."
 readme = "README.md"

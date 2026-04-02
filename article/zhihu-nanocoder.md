@@ -119,7 +119,7 @@ Claude Code 的 QueryEngine（1295 行）管理跨轮次的会话状态。NanoCo
 安装：
 
 ```bash
-pip install nano-coder
+pip install nanocoderagent
 ```
 
 用 DeepSeek（国内推荐）：

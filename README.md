@@ -1,6 +1,6 @@
 # NanoCoder
 
-[![PyPI](https://img.shields.io/pypi/v/nano-coder)](https://pypi.org/project/nano-coder/)
+[![PyPI](https://img.shields.io/pypi/v/nanocoderagent)](https://pypi.org/project/nanocoderagent/)
 [![Python](https://img.shields.io/badge/python-3.10+-blue)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Tests](https://github.com/he-yufeng/NanoCoder/actions/workflows/ci.yml/badge.svg)](https://github.com/he-yufeng/NanoCoder/actions)
@@ -51,7 +51,7 @@ Every pattern is a real, runnable implementation — not a diagram or a blog pos
 ## Install
 
 ```bash
-pip install nano-coder
+pip install nanocoderagent
 ```
 
 Pick your model — any OpenAI-compatible API works:
