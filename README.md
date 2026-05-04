@@ -88,6 +88,21 @@ corecoder -m qwen3:32b
 corecoder -p "add error handling to parse_config()"
 ```
 
+### Non-OpenAI providers (Bedrock, Vertex, Cohere, …)
+
+For providers without an OpenAI-compatible endpoint, install the optional LiteLLM extra:
+
+```bash
+pip install 'corecoder[litellm]'
+
+export CORECODER_PROVIDER=litellm
+export CORECODER_MODEL=anthropic/claude-3-haiku   # any LiteLLM model string
+export ANTHROPIC_API_KEY=sk-ant-...
+corecoder
+```
+
+LiteLLM routes through to 100+ providers (Bedrock, Vertex AI, Cohere, Groq, Replicate, Anyscale, etc.) using one model-string convention. The default `openai` backend is unchanged.
+
 ## Architecture
 
 The whole thing fits in your head:
