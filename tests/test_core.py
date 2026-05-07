@@ -2,7 +2,6 @@
 
 import os
 import pathlib
-import tempfile
 
 from corecoder import Agent, LLM, Config, ALL_TOOLS, __version__
 from corecoder.context import ContextManager, estimate_tokens
@@ -11,7 +10,7 @@ from corecoder.tools import get_tool
 
 
 def test_version():
-    assert __version__ == "0.2.0"
+    assert __version__ == "0.3.0"
 
 
 def test_public_api_exports():
@@ -122,25 +121,22 @@ def test_cost_estimation_unknown_model():
 
 # --- Changed files tracking ---
 
-def test_edit_tracks_changed_files():
+def test_edit_tracks_changed_files(tmp_path):
     from corecoder.tools.edit import _changed_files
     _changed_files.clear()
     edit = get_tool("edit_file")
-    with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False) as f:
-        f.write("aaa\nbbb\n")
-        f.flush()
-        edit.execute(file_path=f.name, old_string="aaa", new_string="zzz")
-        assert any(f.name in p for p in _changed_files)
-        os.unlink(f.name)
+    path = tmp_path / "sample.py"
+    path.write_text("aaa\nbbb\n")
+    edit.execute(file_path=str(path), old_string="aaa", new_string="zzz")
+    assert any(str(path) in p for p in _changed_files)
     _changed_files.clear()
 
 
-def test_write_tracks_changed_files():
+def test_write_tracks_changed_files(tmp_path):
     from corecoder.tools.edit import _changed_files
     _changed_files.clear()
     write = get_tool("write_file")
-    path = tempfile.mktemp(suffix=".txt")
-    write.execute(file_path=path, content="tracked\n")
-    assert any("tracked" not in p and path.split("/")[-1] in p for p in _changed_files) or len(_changed_files) > 0
-    os.unlink(path)
+    path = tmp_path / "tracked.txt"
+    write.execute(file_path=str(path), content="tracked\n")
+    assert any("tracked" not in p and path.name in p for p in _changed_files) or len(_changed_files) > 0
     _changed_files.clear()
